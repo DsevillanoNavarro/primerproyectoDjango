@@ -1,0 +1,10 @@
+<html>
+    <head><title>Soy el menu</title></head>
+    <body>
+        <h1>Ordenados por fecha descendentemente</h1>
+        {% for post in posts%}
+            <li> {{post.titulo}} {{post.autor}}  {{post.fecha}}</li>
+            <li>Cuerpo: {{post.cuerpo}}</li>
+            {% endfor %} 
+    </body>
+</html>
