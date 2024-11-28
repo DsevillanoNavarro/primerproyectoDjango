@@ -1,17 +1,16 @@
+{% extends 'blog/base.html' %}
 <html>
     <head><title>Mi blog</title></head>
     <body>
-        <h1>Mi blog</h1>
+        {% block titulo %}ENTRADA DEL BLOG{% endblock %}
+        {% block contenido %}
         <ul>
+            
             {% for post in posts%}
-            <li> {{post.titulo}} {{post.autor}}  {{post.fecha}}</li>
+            <li> <a href="{% url 'detalle_post' pk=post.pk %}">{{post.titulo}} {{post.autor}}</a></li>
             {% endfor %} 
         </ul>
-        <h2>AUTORES DISTNTOS</h2>
-        <ul>
-            {% for autor in autores%}
-            <li>{{autor}}</li>
-            {% endfor %} 
-        </ul>
+        
+        {% endblock %}
     </body>
 </html>

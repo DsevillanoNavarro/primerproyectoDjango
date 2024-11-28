@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTORES</title>
+</head>
+<body>
+    {% block titulo %}Autores{% endblock %}
+    {% block contenido %}
+    <ul>  
+        {% for post in posts %}
+        <li>{{post}}</li>
+        {% endfor %} 
+    </ul>
+    {% endblock %}
+</body>
+</html>

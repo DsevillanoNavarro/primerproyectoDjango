@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+<html>
+    <head><title>Mi blog</title></head>
+    <body>
+        {% block titulo %} {{post.titulo}} {{post.autor}} {% endblock %}
+        {% block contenido %}
+        <p>{{post.cuerpo}}</p>
+        <a href="{% url 'principal' %}">Volver</a>
+        {% endblock %}
+    </body>
+</html>
