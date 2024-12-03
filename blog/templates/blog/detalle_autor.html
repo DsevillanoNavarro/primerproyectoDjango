@@ -1,14 +1,16 @@
 {% extends 'blog/base.html' %}
-<html>
-    <head><title>Detalles Autor</title></head>
-    <body>
-        {% block titulo %} {{nautor}}{% endblock %}
-        {% block contenido %}
-        <ul>
-        {% for entrada in entradas %}
-        <li>{{entrada}}</li>
+
+    {% block titulo %}
+      {{ autor.nombre }}
+    {% endblock %}
+    {% block contenido %}
+      <ul>
+        {% for post in posts_autor %}
+            <li>{{ post.titulo }}</li>
+            <ul>
+              <li>{{ post.cuerpo }}</li>
+            </ul>
         {% endfor %}
-        </ul>
-        {% endblock %}
-    </body>
-</html>
+      </ul>
+    {% endblock %}
+
