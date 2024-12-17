@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+        {% block titulo %}AÑADIR AUTOR{% endblock %}
+        {% block contenido %}
+        <h2>AÑADIR AUTOR</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Agregar">
+        </form>
+        <a href="{%url 'autores'%}">VOLVER</a>
+        {% endblock %}

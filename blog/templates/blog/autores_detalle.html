@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+    {% block titulo %}
+      Artista
+    {% endblock %}
+    {% block contenido %}
+      <ul>
+            <li>Nombre:{{ autor.nombre }}</li>
+            <li>Apellidos:{{ autor.apellidos }}</li>
+            <li>Email:{{ autor.email }}</li>
+            <li>DNI:{{ autor.dni }}</li>
+            <li>Bio:{{ autor.bio }}</li>
+      </ul>
+    {% endblock %}

@@ -19,4 +19,3 @@ class Post(models.Model):
     fecha = models.DateField(default='2005-6-18')
     def __str__(self):
         return str(self.id) + " " + str(self.titulo)
-    

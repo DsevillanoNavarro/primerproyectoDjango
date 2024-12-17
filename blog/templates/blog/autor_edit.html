@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+        {% block titulo %}EDITAR AUTOR{% endblock %}
+        {% block contenido %}
+        <h2>EDITAR AUTOR</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+        </form>
+        
+        <a href="{%url 'autores'%}">VOLVER</a>
+        <a href="{%url 'delete_autores' pk=pk %}">BORRAR</a>
+        {% endblock %}
